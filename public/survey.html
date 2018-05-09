@@ -1,0 +1,478 @@
+<!-- our survey should have 10 questions of your choosing. Each answer should be on a scale of 1 to 5 based on
+     how much the user agrees or disagrees with a question. -->
+     <!DOCTYPE html>
+     <html lang="en">
+     <head>
+       <meta charset="UTF-8">
+       <title>Friend Finder Survey</title>
+       <!-- Latest compiled and minified CSS & JS -->
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+       <link rel="stylesheet" href="./FF.css">
+       <script src="https://code.jquery.com/jquery.js"></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+     
+     </head>
+     <body>
+     
+       <div class="container">
+         <div class="jumbotron">
+           <h1 style="text-align: center" >Friend Finder Survey</h1>
+           <h3 style="text-align: center" >Answer 10 Easy Questions And Match With The Perfect Friend!</h3>
+           <hr>
+            </div>
+            <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Upload Your Picture!</label>
+                            <div class="input-group">
+                                <span class="input-group-btn">
+                                    <span class="btn btn-default btn-file">
+                                        <input type="file" id="imgInp">
+                                    </span>
+                                </span>
+                                <input type="text" class="form-control" readonly>
+                            </div>
+                            <img id='img-upload'/>
+                        </div>
+                    </div>
+                </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <form>
+                        <div class="form-group">
+                          <label for="firstname">What Is Your Name?</label>
+                          <input type="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter First Name">
+                        </div>
+                    </form>
+                </div>
+            </div>
+         <div class="row">
+     
+           <div class="col-lg-12">
+     
+             <div class="panel panel-default">
+               <div class="panel-heading">
+                 <h3 class="panel-title" style="text-align: center"><strong>Answer The Below Questions With 1 Being Strongly Disagree, 3 Being It's Ok And 5 Being Strongly Agree. When Your Done Hit Submit</strong></h3>
+               </div>
+               <div class="panel-body">
+                 <form method="POST" role="form" id="Question1">
+                    <h2>Fishing Is Relaxing</h2>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="Question1Answer1" value="1">
+                        <label class="form-check-label" for="exampleRadios2">
+                          1
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="Question1Answer2" value="2">
+                        <label class="form-check-label" for="exampleRadios3">
+                          2
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="Question1Answer3" value="3">
+                        <label class="form-check-label" for="exampleRadios2">
+                          3
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="Question1Answer4" value="4">
+                        <label class="form-check-label" for="exampleRadios3">
+                          4
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="Question1Answer5" value="5">
+                        <label class="form-check-label" for="exampleRadios3">
+                          5
+                        </label>
+                      </div>
+                      <hr>
+                    </form>
+                    <!-- NEXT BUTTON? QUESTIONS HIDDEN? -->
+                    <form method="POST" role="form" id="Question2">
+                      <h2>Rock Climbing Is Enjoyable</h2>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="Question2Answer1" value="1">
+                        <label class="form-check-label" for="exampleRadios2">
+                          1
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="Question2Answer2" value="2">
+                        <label class="form-check-label" for="exampleRadios3">
+                          2
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="Question2Answer3" value="3">
+                        <label class="form-check-label" for="exampleRadios2">
+                          3
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="Question2Answer4" value="4">
+                        <label class="form-check-label" for="exampleRadios3">
+                          4
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="Question2Answer5" value="5">
+                        <label class="form-check-label" for="exampleRadios3">
+                          5
+                        </label>
+                      </div>
+                      <hr>
+                    </form>
+                    <form method="POST" role="form" id="Question3">
+                        <h2>Watching A Movie Is Relaxing</h2>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="Question3Answer1" value="1">
+                        <label class="form-check-label" for="exampleRadios2">
+                          1
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="Question3Answer2" value="2">
+                        <label class="form-check-label" for="exampleRadios3">
+                          2
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="Question3Answer3" value="3">
+                        <label class="form-check-label" for="exampleRadios2">
+                          3
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="Question3Answer4" value="4">
+                        <label class="form-check-label" for="exampleRadios3">
+                          4
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="Question3Answer5" value="5">
+                        <label class="form-check-label" for="exampleRadios3">
+                          5
+                        </label>
+                      </div>
+                      <hr>
+                    </form>
+                    <form method="POST" role="form" id="Question4">
+                        <h2>Talking About Politics Is Fun</h2>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="Question4Answer1" value="1">
+                        <label class="form-check-label" for="exampleRadios2">
+                          1
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="Question4Answer2" value="2">
+                        <label class="form-check-label" for="exampleRadios3">
+                          2
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="Question4Answer3" value="3">
+                        <label class="form-check-label" for="exampleRadios2">
+                          3
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="Question4Answer4" value="4">
+                        <label class="form-check-label" for="exampleRadios3">
+                          4
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="Question4Answer5" value="5">
+                        <label class="form-check-label" for="exampleRadios3">
+                          5
+                        </label>
+                      </div>
+                      <hr>
+                    </form>
+                    <form method="POST" role="form" id="Question5">
+                        <h2>Being Outside Is Relaxing</h2>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="Question5Answer1" value="1">
+                        <label class="form-check-label" for="exampleRadios2">
+                          1
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="Question5Answer2" value="2">
+                        <label class="form-check-label" for="exampleRadios3">
+                          2
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="Question5Answer3" value="3">
+                        <label class="form-check-label" for="exampleRadios2">
+                          3
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="Question5Answer4" value="4">
+                        <label class="form-check-label" for="exampleRadios3">
+                          4
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="Question5Answer5" value="5">
+                        <label class="form-check-label" for="exampleRadios3">
+                          5
+                        </label>
+                      </div>
+                      <hr>
+                    </form>
+                    <form method="POST" role="form" id="Question6">
+                        <h2>Watching Sports Is Enjoyable</h2>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="Question6Answer1" value="1">
+                        <label class="form-check-label" for="exampleRadios2">
+                          1
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="Question6Answer2" value="2">
+                        <label class="form-check-label" for="exampleRadios3">
+                          2
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="Question6Answer3" value="3">
+                        <label class="form-check-label" for="exampleRadios2">
+                          3
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="Question6Answer4" value="4">
+                        <label class="form-check-label" for="exampleRadios3">
+                          4
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="Question6Answer5" value="5">
+                        <label class="form-check-label" for="exampleRadios3">
+                          5
+                        </label>
+                      </div>
+                      <hr>
+                    </form>
+                    <form method="POST" role="form" id="Question7">
+                        <h2>I Love Music</h2>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="1">
+                        <label class="form-check-label" for="exampleRadios2">
+                          1
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="2">
+                        <label class="form-check-label" for="exampleRadios3">
+                          2
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="3">
+                        <label class="form-check-label" for="exampleRadios2">
+                          3
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="4">
+                        <label class="form-check-label" for="exampleRadios3">
+                          4
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="5">
+                        <label class="form-check-label" for="exampleRadios3">
+                          5
+                        </label>
+                      </div>
+                      <hr>
+                    </form>
+                    <form method="POST" role="form" id="Question8">
+                        <h2>I Love Eating Food</h2>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="1">
+                        <label class="form-check-label" for="exampleRadios2">
+                          1
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="2">
+                        <label class="form-check-label" for="exampleRadios3">
+                          2
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="3">
+                        <label class="form-check-label" for="exampleRadios2">
+                          3
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="4">
+                        <label class="form-check-label" for="exampleRadios3">
+                          4
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="5">
+                        <label class="form-check-label" for="exampleRadios3">
+                          5
+                        </label>
+                      </div>
+                      <hr>
+                    </form>
+                    <form method="POST" role="form" id="Question9">
+                        <h2>I Love Working</h2>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="1">
+                        <label class="form-check-label" for="exampleRadios2">
+                          1
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="2">
+                        <label class="form-check-label" for="exampleRadios3">
+                          2
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="3">
+                        <label class="form-check-label" for="exampleRadios2">
+                          3
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="4">
+                        <label class="form-check-label" for="exampleRadios3">
+                          4
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="5">
+                        <label class="form-check-label" for="exampleRadios3">
+                          5
+                        </label>
+                      </div>
+                      <hr>
+                    </form>
+                    <form method="POST" role="form" id="Question10">
+                        <h2>I Love Meeting New People</h2>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="1">
+                        <label class="form-check-label" for="exampleRadios2">
+                          1
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="2">
+                        <label class="form-check-label" for="exampleRadios3">
+                          2
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="3">
+                        <label class="form-check-label" for="exampleRadios2">
+                          3
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="4">
+                        <label class="form-check-label" for="exampleRadios3">
+                          4
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="5">
+                        <label class="form-check-label" for="exampleRadios3">
+                          5
+                        </label>
+                      </div>
+                      <hr>
+                    </form>
+                 <br>
+                 <div class="text-center">
+                   <button type="submit" class="btn btn-primary btn-md" id="submitForm">Submit</button>
+                 </div>
+               </div>
+             </div>
+     
+           </div>
+         </div>
+         <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>Thanks For Filling The Survey! If You Match With Anyone They Will Appear Below!</p>
+              <!--img-->
+              <!--name-->
+            </div>
+          
+          </div>
+         
+       </div>
+     
+       <script type="text/javascript">
+     
+
+
+       $("#submitForm").on("click", function(event) {
+          event.preventDefault();
+          validateForm();
+
+        });
+       var validateForm = function(){
+        	var checks = $('input[type="radio"]:checked').map(function(){
+	      	return $(this).val();
+	        }).get()
+          var newFriend = {
+            name: $("#name").val().trim(),
+            photo: $("#imgInp").val().trim(),
+            scores: checks
+          }
+          $.post("./data/friends.js/new", newFriend)
+            .then(function(data) {
+              console.log(data);
+            })
+          runsurveyQuery();
+          return false        
+  }
+  function runsurveyQuery() {
+
+    var currentURL = window.location.origin;
+
+   
+    $.ajax({ url: currentURL + "/api/survey", method: "GET" })
+      .then(function(surveyData) {
+         // Get the modal
+         var modal = $('#myModal');
+
+         var span = $("#close")[0];
+
+         modal.style.display = "block";
+         span.onclick = function() {
+         modal.style.display = "none";
+}
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+}
+      
+});
+        
+
+}
+      </script>
+    
+     
+     </body>
+     </html>
+     
